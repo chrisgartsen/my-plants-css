@@ -1,0 +1,15 @@
+// Colors
+
+$full-white-color: #fff;
+$white-color: #fdfdfd;
+
+$primary-color: rgb(21, 86, 37);
+$secondary-color: hsl(0, 2%, 52%);
+
+$error-color: red;
+
+$primary-color-light: lighten($primary-color, 10%);
+$primary-color-dark: darken($primary-color, 10%);
+
+$secondary-color-light: lighten($secondary-color, 10%);
+$secondary-color-dark: darken($secondary-color, 15%);

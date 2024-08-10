@@ -109,11 +109,135 @@ input {
 h1 {
   font-weight: bold;
   font-size: 2.5rem;
-  margin-bottom: 2rem;
+  margin-block: 2rem;
   color: rgb(21, 86, 37);
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-block: 2rem;
+  color: rgb(21, 86, 37);
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-block: 2rem;
+  color: rgb(21, 86, 37);
+}
+
+.btn-primary {
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  transition: 1s ease;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 3px 3px 15px #ccc;
+  background-color: rgb(21, 86, 37);
+}
+.btn-primary:active {
+  transform: translateY(4px);
+}
+.btn-primary:hover {
+  background-color: #1f7f37;
+}
+
+.btn-secondary {
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  transition: 1s ease;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 3px 3px 15px #ccc;
+  background-color: hsl(0, 2%, 52%);
+}
+.btn-secondary:active {
+  transform: translateY(4px);
+}
+.btn-secondary:hover {
+  background-color: #605c5c;
+}
+
+.btn-link {
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  transition: 1s ease;
+  color: rgb(21, 86, 37);
+  background-color: transparent;
+}
+.btn-link:active {
+  transform: translateY(4px);
+}
+.btn-link:hover {
+  color: #1f7f37;
+}
+
+button:disabled,
+button[disabled] {
+  border: 1px solid #a09c9c;
+  background-color: #fdfdfd;
+  color: #a09c9c;
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+button:disabled:hover,
+button[disabled]:hover {
+  background-color: #fdfdfd;
+}
+button:disabled:active,
+button[disabled]:active {
+  transform: translateY(0px);
+}
+
+a {
+  text-decoration: none;
+  font-size: inherit;
+}
+a :hover {
+  cursor: pointer;
+}
+
+.link-primary {
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: 2s ease;
+  color: rgb(21, 86, 37);
+}
+.link-primary:hover {
+  color: #1f7f37;
+  border-bottom: 2px solid #1f7f37;
+}
+
+.link-secondary {
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: 2s ease;
+  color: hsl(0, 2%, 52%);
+}
+.link-secondary:hover {
+  color: #605c5c;
+  border-bottom: 2px solid #605c5c;
 }
 
 html,
 body {
   font-family: "Lato", sans-serif;
+}
+
+main {
+  margin-block: 4rem;
+  padding-inline: 5rem;
 }/*# sourceMappingURL=style.css.map */

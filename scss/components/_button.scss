@@ -1,0 +1,62 @@
+@mixin btn-base {
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+
+  transition: 1s ease;
+  &:active {
+    transform: translateY(4px);
+  }
+}
+
+@mixin btn-fill {
+  color: $full-white-color;
+  border-radius: 5px;
+  box-shadow: 3px 3px 15px #ccc;
+}
+
+.btn-primary {
+  @include btn-base;
+  @include btn-fill;
+  background-color: $primary-color;
+  &:hover {
+    background-color: $primary-color-light;
+  }
+}
+
+.btn-secondary {
+  @include btn-base;
+  @include btn-fill;
+  background-color: $secondary-color;
+  &:hover {
+    background-color: $secondary-color-dark;
+  }
+}
+
+.btn-link {
+  @include btn-base;
+  color: $primary-color;
+  background-color: transparent;
+  &:hover {
+    color: $primary-color-light;
+  }
+}
+
+button:disabled,
+button[disabled] {
+  border: 1px solid $secondary-color-light;
+  background-color: $white-color;
+  color: $secondary-color-light;
+  cursor: not-allowed;
+  pointer-events: all !important;
+
+  &:hover {
+    background-color: $white-color;
+  }
+  &:active {
+    transform: translateY(0px);
+  }
+}

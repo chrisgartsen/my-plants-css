@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 
-@import "reset.scss";
-@import "styling.scss";
+@import "base/index";
+@import "components/index";
 
 html,
 body {
   font-family: "Lato", sans-serif;
+}
+
+main {
+  margin-block: 4rem;
+  padding-inline: 5rem;
 }
