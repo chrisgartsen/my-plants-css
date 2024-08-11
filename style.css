@@ -232,6 +232,90 @@ a :hover {
   border-bottom: 2px solid #605c5c;
 }
 
+.form-component:has(input[type=text]),
+.form-component:has(input[type=password]) {
+  position: relative;
+}
+.form-component:has(input[type=text]) label,
+.form-component:has(input[type=password]) label {
+  position: absolute;
+  left: 1.3rem;
+  top: 2.1rem;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  color: #605c5c;
+  border-left: solid 2px transparent;
+  border-right: solid 2px transparent;
+  padding-inline: 4px;
+  padding-top: 1px;
+  background-color: #fdfdfd;
+}
+.form-component:has(input[type=text]) input,
+.form-component:has(input[type=password]) input {
+  font-family: inherit;
+  font-size: 1rem;
+  color: rgb(21, 86, 37);
+  background-color: inherit;
+  padding: 1rem 1.5rem;
+  outline: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid #a09c9c;
+  border-radius: 5px;
+  color: rgb(21, 86, 37);
+}
+.form-component:has(input[type=text]) input:focus,
+.form-component:has(input[type=password]) input:focus {
+  border-color: rgb(21, 86, 37);
+}
+.form-component:has(input[type=text]) input:disabled,
+.form-component:has(input[type=password]) input:disabled {
+  color: #605c5c;
+}
+.form-component:has(input[type=text]) input:focus ~ label,
+.form-component:has(input[type=text]) input:not(:placeholder-shown) ~ label,
+.form-component:has(input[type=password]) input:focus ~ label,
+.form-component:has(input[type=password]) input:not(:placeholder-shown) ~ label {
+  transform: translateY(-1.6rem);
+  font-size: 0.9rem;
+  background-color: #fdfdfd;
+  padding-bottom: 1px;
+}
+.form-component:has(input[type=text]) input:not(:placeholder-shown) ~ label,
+.form-component:has(input[type=password]) input:not(:placeholder-shown) ~ label {
+  color: #a09c9c;
+  border-left: solid 2px #a09c9c;
+  border-right: solid 2px #a09c9c;
+  background-color: #fdfdfd;
+}
+.form-component:has(input[type=text]) input:focus ~ label,
+.form-component:has(input[type=password]) input:focus ~ label {
+  color: rgb(21, 86, 37);
+  background-color: #fdfdfd;
+  border-left: solid 2px rgb(21, 86, 37);
+  border-right: solid 2px rgb(21, 86, 37);
+}
+.form-component:has(input[type=text]).error input,
+.form-component:has(input[type=password]).error input {
+  color: red;
+  border-color: red;
+  margin-bottom: 0.2rem;
+}
+.form-component:has(input[type=text]).error input:not(:placeholder-shown) ~ label,
+.form-component:has(input[type=text]).error input:focus ~ label,
+.form-component:has(input[type=password]).error input:not(:placeholder-shown) ~ label,
+.form-component:has(input[type=password]).error input:focus ~ label {
+  color: red;
+  border-left-color: red;
+  border-right-color: red;
+}
+.form-component:has(input[type=text]) .error-message,
+.form-component:has(input[type=password]) .error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
 html,
 body {
   font-family: "Lato", sans-serif;

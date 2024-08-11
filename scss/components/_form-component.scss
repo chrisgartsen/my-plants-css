@@ -1,0 +1,84 @@
+.form-component:has(input[type="text"]),
+.form-component:has(input[type="password"]) {
+  position: relative;
+
+  label {
+    position: absolute;
+    left: 1.3rem;
+    top: 2.1rem;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    color: $secondary-color-dark;
+    border-left: solid 2px transparent;
+    border-right: solid 2px transparent;
+    padding-inline: 4px;
+    padding-top: 1px;
+    background-color: $white-color;
+  }
+
+  input {
+    font-family: inherit;
+    font-size: 1rem;
+    color: $primary-color;
+    background-color: inherit;
+
+    padding: 1rem 1.5rem;
+    outline: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    border: 2px solid $secondary-color-light;
+    border-radius: 5px;
+    color: $primary-color;
+
+    &:focus {
+      border-color: $primary-color;
+    }
+    &:disabled {
+      color: $secondary-color-dark;
+    }
+  }
+
+  input:focus ~ label,
+  input:not(:placeholder-shown) ~ label {
+    transform: translateY(-1.6rem);
+    font-size: 0.9rem;
+    background-color: $white-color;
+    padding-bottom: 1px;
+  }
+
+  input:not(:placeholder-shown) ~ label {
+    color: $secondary-color-light;
+    border-left: solid 2px $secondary-color-light;
+    border-right: solid 2px $secondary-color-light;
+    background-color: $white-color;
+  }
+
+  input:focus ~ label {
+    color: $primary-color;
+    background-color: $white-color;
+    border-left: solid 2px $primary-color;
+    border-right: solid 2px $primary-color;
+  }
+
+  &.error {
+    input {
+      color: $error-color;
+      border-color: $error-color;
+      margin-bottom: 0.2rem;
+    }
+
+    input:not(:placeholder-shown) ~ label,
+    input:focus ~ label {
+      color: $error-color;
+      border-left-color: $error-color;
+      border-right-color: $error-color;
+    }
+  }
+
+  .error-message {
+    color: $error-color;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+}
