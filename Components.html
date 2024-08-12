@@ -6,7 +6,6 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <script src="main.js"></script>
   </head>
   <body>
     <main>
@@ -26,67 +25,162 @@
 
       <h1>Form elements</h1>
 
-      <h2>Input field</h2>
+      <div>
+        <h2>Input field</h2>
 
-      <div class="form-component text">
-        <input type="text" name="text-input" id="text-input" placeholder="" />
-        <label for="text-input">My Text Input</label>
-      </div>
-      <div class="form-component text error">
-        <input
-          type="text"
-          name="text-error"
-          id="text-input"
-          placeholder=""
-          value="Error text"
-        />
-        <label for="text-input">My Error Input</label>
-        <div class="error-message">An error has occured</div>
-      </div>
-      <div class="form-component text">
-        <input
-          type="text"
-          name="text-input"
-          id="text-input"
-          disabled
-          placeholder=""
-          value="disabled text"
-        />
-        <label for="text-input">My Disabled Input</label>
+        <div class="form-component">
+          <input type="text" name="text-input" id="text-input" placeholder="" />
+          <label for="text-input">My Text Input</label>
+        </div>
+        <div class="form-component text error">
+          <input
+            type="text"
+            name="text-error"
+            id="text-input-error"
+            placeholder=""
+            value="Error text"
+          />
+          <label for="text-input">My Error Input</label>
+          <div class="error-message">An error has occured</div>
+        </div>
+        <div class="form-component">
+          <input
+            type="text"
+            name="text-input"
+            id="text-input-disabled"
+            disabled
+            placeholder=""
+            value="disabled text"
+          />
+          <label for="text-input">My Disabled Input</label>
+        </div>
       </div>
 
-      <h2>Password fields</h2>
+      <div>
+        <h2>Password fields</h2>
 
-      <div class="form-component text">
-        <input
-          type="password"
-          name="text-input"
-          id="text-input"
-          placeholder=""
-        />
-        <label for="text-input">My Text Input</label>
+        <div class="form-component">
+          <input
+            type="password"
+            name="text-input"
+            id="pw-input"
+            placeholder=""
+          />
+          <label for="text-input">My Text Input</label>
+        </div>
+        <div class="form-component error">
+          <input
+            type="password"
+            name="text-error"
+            id="pw-input-error"
+            placeholder=""
+            value="Error text"
+          />
+          <label for="text-input">My Error Input</label>
+          <div class="error-message">An error has occured</div>
+        </div>
+        <div class="form-component text">
+          <input type="password" name="pw-input-disabled id="pw-input" disabled
+          placeholder="" value="disabled text" />
+          <label for="text-input">My Disabled Input</label>
+        </div>
       </div>
-      <div class="form-component text error">
-        <input
-          type="password"
-          name="text-error"
-          id="text-input"
-          placeholder=""
-          value="Error text"
-        />
-        <label for="text-input">My Error Input</label>
-        <div class="error-message">An error has occured</div>
+
+      <div>
+        <h2>Text Areas</h2>
+
+        <div class="form-component">
+          <textarea name="text-input" id="text-area" placeholder=""></textarea>
+          <label for="text-input">My Text Input</label>
+        </div>
+        <div class="form-component text error">
+          <textarea
+            name="text-input"
+            id="tex-area-error"
+            placeholder=""
+          ></textarea>
+          <label for="text-input">My Text Input</label>
+          <div class="error-message">An error has occured</div>
+        </div>
+        <div class="form-component">
+          <textarea
+            name="text-area-disabled"
+            id="text-input"
+            placeholder=""
+            disabled
+          ></textarea>
+          <label for="text-input">My Text Input</label>
+        </div>
       </div>
-      <div class="form-component text">
-        <input
-          type="password"
-          name="text-input"
-          id="text-input"
-          disabled
-          placeholder=""
-          value="disabled text"
-        />
-        <label for="text-input">My Disabled Input</label>
+
+      <div>
+        <h2>Radio Buttons</h2>
+
+        <div class="form-component">
+          <label for="light">
+            <input type="radio" name="sunlight" value="light" checked />
+            Light
+          </label>
+        </div>
+
+        <div class="form-component">
+          <label for="shade">
+            <input type="radio" name="sunlight" value="shade" />
+            Shade
+          </label>
+        </div>
+
+        <div class="form-component">
+          <label for="shade">
+            <input
+              type="radio"
+              name="disabled"
+              value="disabled"
+              disabled
+              checked
+            />
+            Disabled
+          </label>
+        </div>
+        <div class="form-component error">
+          <label for="shade">
+            <input type="radio" name="error" value="error" />
+            Error
+          </label>
+        </div>
+      </div>
+
+      <div>
+        <h2>Drop down selector</h2>
+        <div class="form-component">
+          <select name="example" id="example-select">
+            <option value>Please select</option>
+            <option value="1">First Option</option>
+            <option value="2">Second Option</option>
+            <option value="3">Third Option</option>
+            <option value="4">Fourth Option</option>
+          </select>
+        </div>
+
+        <div class="form-component error">
+          <select name="example" id="example-select">
+            <option value>With Error</option>
+            <option value="1">First Option</option>
+            <option value="2">Second Option</option>
+            <option value="3">Third Option</option>
+            <option value="4">Fourth Option</option>
+          </select>
+        </div>
+
+        <div class="form-component">
+          <select name="example" id="example-select" disabled>
+            <option value>Disabled</option>
+            <option value="1">First Option</option>
+            <option value="2">Second Option</option>
+            <option value="3">Third Option</option>
+            <option value="4">Fourth Option</option>
+          </select>
+        </div>
       </div>
     </main>
   </body>
