@@ -156,6 +156,69 @@
   }
   label {
     color: $error-color;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+}
+
+/* -----------------------------------------------------*/
+/* Checkbox                                             */
+/*                                                      */
+/* -----------------------------------------------------*/
+
+.form-component:has(input[type="checkbox"]) {
+  margin-bottom: 0.5rem;
+
+  input {
+    appearance: none;
+    border: 2px solid $primary-color;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 2px;
+    transform: translateY(6px);
+  }
+
+  input:disabled {
+    border-color: $secondary-color-light;
+  }
+
+  input::after {
+    position: absolute;
+    content: "";
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: transparent;
+    left: 0.09rem;
+    top: 0.09rem;
+    border-radius: 1px;
+  }
+
+  input:checked::after {
+    background-color: $primary-color;
+  }
+
+  input:checked:disabled::after {
+    background-color: $secondary-color-light;
+  }
+
+  label {
+    position: relative;
+  }
+}
+
+.form-component:has(input[type="checkbox"]).error {
+  input {
+    border-color: $error-color;
+  }
+
+  input:checked::after {
+    background-color: $error-color;
+  }
+
+  label {
+    color: $error-color;
+    font-size: 1rem;
+    font-family: inherit;
   }
 }
 

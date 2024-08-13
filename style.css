@@ -202,36 +202,6 @@ button[disabled]:active {
   transform: translateY(0px);
 }
 
-a {
-  text-decoration: none;
-  font-size: inherit;
-}
-a :hover {
-  cursor: pointer;
-}
-
-.link-primary {
-  padding-bottom: 2px;
-  border-bottom: 2px solid transparent;
-  transition: 2s ease;
-  color: rgb(21, 86, 37);
-}
-.link-primary:hover {
-  color: #1f7f37;
-  border-bottom: 2px solid #1f7f37;
-}
-
-.link-secondary {
-  padding-bottom: 2px;
-  border-bottom: 2px solid transparent;
-  transition: 2s ease;
-  color: hsl(0, 2%, 52%);
-}
-.link-secondary:hover {
-  color: #605c5c;
-  border-bottom: 2px solid #605c5c;
-}
-
 /* -----------------------------------------------------*/
 /* input field, password field and text area            */
 /*                                                      */
@@ -407,6 +377,58 @@ a :hover {
 }
 .form-component:has(input[type=radio]).error label {
   color: red;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+/* -----------------------------------------------------*/
+/* Checkbox                                             */
+/*                                                      */
+/* -----------------------------------------------------*/
+.form-component:has(input[type=checkbox]) {
+  margin-bottom: 0.5rem;
+}
+.form-component:has(input[type=checkbox]) input {
+  appearance: none;
+  border: 2px solid rgb(21, 86, 37);
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 2px;
+  transform: translateY(6px);
+}
+.form-component:has(input[type=checkbox]) input:disabled {
+  border-color: #a09c9c;
+}
+.form-component:has(input[type=checkbox]) input::after {
+  position: absolute;
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: transparent;
+  left: 0.09rem;
+  top: 0.09rem;
+  border-radius: 1px;
+}
+.form-component:has(input[type=checkbox]) input:checked::after {
+  background-color: rgb(21, 86, 37);
+}
+.form-component:has(input[type=checkbox]) input:checked:disabled::after {
+  background-color: #a09c9c;
+}
+.form-component:has(input[type=checkbox]) label {
+  position: relative;
+}
+
+.form-component:has(input[type=checkbox]).error input {
+  border-color: red;
+}
+.form-component:has(input[type=checkbox]).error input:checked::after {
+  background-color: red;
+}
+.form-component:has(input[type=checkbox]).error label {
+  color: red;
+  font-size: 1rem;
+  font-family: inherit;
 }
 
 /* -----------------------------------------------------*/
@@ -442,6 +464,64 @@ a :hover {
 .form-component:has(select).error select {
   border: 2px solid red;
   color: red;
+}
+
+a {
+  text-decoration: none;
+  font-size: inherit;
+}
+a :hover {
+  cursor: pointer;
+}
+
+.link-primary {
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: 2s ease;
+  color: rgb(21, 86, 37);
+}
+.link-primary:hover {
+  color: #1f7f37;
+  border-bottom: 2px solid #1f7f37;
+}
+
+.link-secondary {
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: 2s ease;
+  color: hsl(0, 2%, 52%);
+}
+.link-secondary:hover {
+  color: #605c5c;
+  border-bottom: 2px solid #605c5c;
+}
+
+nav.navbar .container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav.navbar .nav-menu ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+nav.navbar .nav-menu ul a {
+  display: block;
+}
+nav.navbar .link-primary {
+  transform: translateY(6px);
+}
+nav.navbar .link-primary.active, nav.navbar .link-primary:hover {
+  color: #0b2d13;
+  border-bottom: 2px solid #0b2d13;
+}
+nav.navbar .logo {
+  font-size: 2rem;
+  color: rgb(21, 86, 37);
 }
 
 html,
