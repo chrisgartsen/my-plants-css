@@ -32,3 +32,62 @@ nav.navbar {
     color: $primary-color;
   }
 }
+
+.hamburger {
+  z-index: 100;
+  cursor: pointer;
+  display: block;
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 7px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: $primary-color;
+  }
+
+  &.active {
+    .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .bar:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+
+    .bar:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }
+}
+
+.mobile-menu {
+  display: none;
+  transform: translateX(1645px);
+  transition: all 1s ease;
+  position: absolute;
+  z-index: 10;
+  background-color: #fff;
+  opacity: 95%;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  ul {
+    margin-top: 200px;
+  }
+
+  li {
+    padding-bottom: 35px;
+    font-size: 1.4rem;
+  }
+  display: flex;
+}
