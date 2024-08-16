@@ -1,0 +1,614 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  border-radius: 0;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-block: 2rem;
+  color: rgb(21, 86, 37);
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-block: 2rem;
+  color: rgb(21, 86, 37);
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-block: 2rem;
+  color: rgb(21, 86, 37);
+}
+
+.btn-primary {
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  transition: 1s ease;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 3px 3px 15px #ccc;
+  background-color: rgb(21, 86, 37);
+}
+.btn-primary:active {
+  transform: translateY(4px);
+}
+.btn-primary:hover {
+  background-color: #1f7f37;
+}
+
+.btn-secondary {
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  transition: 1s ease;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 3px 3px 15px #ccc;
+  background-color: hsl(0, 2%, 52%);
+}
+.btn-secondary:active {
+  transform: translateY(4px);
+}
+.btn-secondary:hover {
+  background-color: #605c5c;
+}
+
+.btn-link {
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  transition: 1s ease;
+  color: rgb(21, 86, 37);
+  background-color: transparent;
+}
+.btn-link:active {
+  transform: translateY(4px);
+}
+.btn-link:hover {
+  color: #1f7f37;
+}
+
+button:disabled,
+button[disabled] {
+  border: 1px solid #a09c9c;
+  background-color: #fdfdfd;
+  color: #a09c9c;
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+button:disabled:hover,
+button[disabled]:hover {
+  background-color: #fdfdfd;
+}
+button:disabled:active,
+button[disabled]:active {
+  transform: translateY(0px);
+}
+
+/* -----------------------------------------------------*/
+/* input field, password field and text area            */
+/*                                                      */
+/* -----------------------------------------------------*/
+.form-component:has(input[type=text]),
+.form-component:has(input[type=password]),
+.form-component:has(textarea) {
+  position: relative;
+}
+.form-component:has(input[type=text]) label,
+.form-component:has(input[type=password]) label,
+.form-component:has(textarea) label {
+  position: absolute;
+  left: 1.3rem;
+  top: 2.1rem;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  color: #605c5c;
+  border-left: solid 2px transparent;
+  border-right: solid 2px transparent;
+  padding-inline: 4px;
+  padding-top: 1px;
+  background-color: #fdfdfd;
+}
+.form-component:has(input[type=text]) textarea,
+.form-component:has(input[type=password]) textarea,
+.form-component:has(textarea) textarea {
+  height: 12rem;
+  resize: none;
+}
+.form-component:has(input[type=text]) input,
+.form-component:has(input[type=text]) textarea,
+.form-component:has(input[type=password]) input,
+.form-component:has(input[type=password]) textarea,
+.form-component:has(textarea) input,
+.form-component:has(textarea) textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  color: rgb(21, 86, 37);
+  background-color: inherit;
+  padding: 1rem 1.5rem;
+  outline: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid #a09c9c;
+  border-radius: 5px;
+  color: rgb(21, 86, 37);
+}
+.form-component:has(input[type=text]) input:focus,
+.form-component:has(input[type=text]) textarea:focus,
+.form-component:has(input[type=password]) input:focus,
+.form-component:has(input[type=password]) textarea:focus,
+.form-component:has(textarea) input:focus,
+.form-component:has(textarea) textarea:focus {
+  border-color: rgb(21, 86, 37);
+}
+.form-component:has(input[type=text]) input:disabled,
+.form-component:has(input[type=text]) textarea:disabled,
+.form-component:has(input[type=password]) input:disabled,
+.form-component:has(input[type=password]) textarea:disabled,
+.form-component:has(textarea) input:disabled,
+.form-component:has(textarea) textarea:disabled {
+  color: #a09c9c;
+}
+.form-component:has(input[type=text]) input:not(:-moz-placeholder-shown) ~ label, .form-component:has(input[type=text]) textarea:not(:-moz-placeholder-shown) ~ label, .form-component:has(input[type=password]) input:not(:-moz-placeholder-shown) ~ label, .form-component:has(input[type=password]) textarea:not(:-moz-placeholder-shown) ~ label, .form-component:has(textarea) input:not(:-moz-placeholder-shown) ~ label, .form-component:has(textarea) textarea:not(:-moz-placeholder-shown) ~ label {
+  transform: translateY(-1.6rem);
+  font-size: 0.9rem;
+  background-color: #fdfdfd;
+  padding-bottom: 1px;
+}
+.form-component:has(input[type=text]) input:focus ~ label,
+.form-component:has(input[type=text]) input:not(:placeholder-shown) ~ label,
+.form-component:has(input[type=text]) textarea:focus ~ label,
+.form-component:has(input[type=text]) textarea:not(:placeholder-shown) ~ label,
+.form-component:has(input[type=password]) input:focus ~ label,
+.form-component:has(input[type=password]) input:not(:placeholder-shown) ~ label,
+.form-component:has(input[type=password]) textarea:focus ~ label,
+.form-component:has(input[type=password]) textarea:not(:placeholder-shown) ~ label,
+.form-component:has(textarea) input:focus ~ label,
+.form-component:has(textarea) input:not(:placeholder-shown) ~ label,
+.form-component:has(textarea) textarea:focus ~ label,
+.form-component:has(textarea) textarea:not(:placeholder-shown) ~ label {
+  transform: translateY(-1.6rem);
+  font-size: 0.9rem;
+  background-color: #fdfdfd;
+  padding-bottom: 1px;
+}
+.form-component:has(input[type=text]) input:not(:-moz-placeholder-shown) ~ label, .form-component:has(input[type=text]) textarea:not(:-moz-placeholder-shown) ~ label, .form-component:has(input[type=password]) input:not(:-moz-placeholder-shown) ~ label, .form-component:has(input[type=password]) textarea:not(:-moz-placeholder-shown) ~ label, .form-component:has(textarea) input:not(:-moz-placeholder-shown) ~ label, .form-component:has(textarea) textarea:not(:-moz-placeholder-shown) ~ label {
+  color: #a09c9c;
+  border-left: solid 2px #a09c9c;
+  border-right: solid 2px #a09c9c;
+  background-color: #fdfdfd;
+}
+.form-component:has(input[type=text]) input:not(:placeholder-shown) ~ label,
+.form-component:has(input[type=text]) textarea:not(:placeholder-shown) ~ label,
+.form-component:has(input[type=password]) input:not(:placeholder-shown) ~ label,
+.form-component:has(input[type=password]) textarea:not(:placeholder-shown) ~ label,
+.form-component:has(textarea) input:not(:placeholder-shown) ~ label,
+.form-component:has(textarea) textarea:not(:placeholder-shown) ~ label {
+  color: #a09c9c;
+  border-left: solid 2px #a09c9c;
+  border-right: solid 2px #a09c9c;
+  background-color: #fdfdfd;
+}
+.form-component:has(input[type=text]) input:focus ~ label,
+.form-component:has(input[type=text]) textarea:focus ~ label,
+.form-component:has(input[type=password]) input:focus ~ label,
+.form-component:has(input[type=password]) textarea:focus ~ label,
+.form-component:has(textarea) input:focus ~ label,
+.form-component:has(textarea) textarea:focus ~ label {
+  color: rgb(21, 86, 37);
+  background-color: #fdfdfd;
+  border-left: solid 2px rgb(21, 86, 37);
+  border-right: solid 2px rgb(21, 86, 37);
+}
+.form-component:has(input[type=text]).error input,
+.form-component:has(input[type=text]).error textarea,
+.form-component:has(input[type=password]).error input,
+.form-component:has(input[type=password]).error textarea,
+.form-component:has(textarea).error input,
+.form-component:has(textarea).error textarea {
+  color: red;
+  border-color: red;
+  margin-bottom: 0.2rem;
+}
+.form-component:has(input[type=text]).error input:not(:-moz-placeholder-shown) ~ label, .form-component:has(input[type=text]).error textarea:not(:-moz-placeholder-shown) ~ label, .form-component:has(input[type=password]).error input:not(:-moz-placeholder-shown) ~ label, .form-component:has(input[type=password]).error textarea:not(:-moz-placeholder-shown) ~ label, .form-component:has(textarea).error input:not(:-moz-placeholder-shown) ~ label, .form-component:has(textarea).error textarea:not(:-moz-placeholder-shown) ~ label {
+  color: red;
+  border-left-color: red;
+  border-right-color: red;
+}
+.form-component:has(input[type=text]).error input:not(:placeholder-shown) ~ label,
+.form-component:has(input[type=text]).error input:focus ~ label,
+.form-component:has(input[type=text]).error textarea:not(:placeholder-shown) ~ label,
+.form-component:has(input[type=text]).error textarea:focus ~ label,
+.form-component:has(input[type=password]).error input:not(:placeholder-shown) ~ label,
+.form-component:has(input[type=password]).error input:focus ~ label,
+.form-component:has(input[type=password]).error textarea:not(:placeholder-shown) ~ label,
+.form-component:has(input[type=password]).error textarea:focus ~ label,
+.form-component:has(textarea).error input:not(:placeholder-shown) ~ label,
+.form-component:has(textarea).error input:focus ~ label,
+.form-component:has(textarea).error textarea:not(:placeholder-shown) ~ label,
+.form-component:has(textarea).error textarea:focus ~ label {
+  color: red;
+  border-left-color: red;
+  border-right-color: red;
+}
+.form-component:has(input[type=text]) .error-message,
+.form-component:has(input[type=password]) .error-message,
+.form-component:has(textarea) .error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* -----------------------------------------------------*/
+/* Radio Button                                         */
+/*                                                      */
+/* -----------------------------------------------------*/
+.form-component:has(input[type=radio]) {
+  margin-bottom: 0.5rem;
+}
+.form-component:has(input[type=radio]) input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fdfdfd;
+  margin: 0;
+  color: rgb(21, 86, 37);
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid rgb(21, 86, 37);
+  border-radius: 50%;
+  transform: translateY(4px);
+  transition: outline 0.1s;
+}
+.form-component:has(input[type=radio]) input[type=radio]:checked {
+  background-color: rgb(21, 86, 37);
+  background-clip: content-box;
+  padding: 0.14rem;
+  background-image: radial-gradient(circle, rgb(21, 86, 37) 0%, rgb(21, 86, 37) 50%, transparent 60%, transparent 100%);
+}
+.form-component:has(input[type=radio]) input[type=radio]:disabled {
+  border-color: #a09c9c;
+}
+.form-component:has(input[type=radio]) input[type=radio]:disabled:checked {
+  background-image: radial-gradient(circle, #a09c9c 0%, #a09c9c 50%, transparent 60%, transparent 100%);
+}
+
+.form-component:has(input[type=radio]).error input[type=radio] {
+  border-color: red;
+  background-image: radial-gradient(circle, red 0%, red 50%, transparent 60%, transparent 100%);
+}
+.form-component:has(input[type=radio]).error label {
+  color: red;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+/* -----------------------------------------------------*/
+/* Checkbox                                             */
+/*                                                      */
+/* -----------------------------------------------------*/
+.form-component:has(input[type=checkbox]) {
+  margin-bottom: 0.5rem;
+}
+.form-component:has(input[type=checkbox]) input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 2px solid rgb(21, 86, 37);
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 2px;
+  transform: translateY(6px);
+}
+.form-component:has(input[type=checkbox]) input:disabled {
+  border-color: #a09c9c;
+}
+.form-component:has(input[type=checkbox]) input::after {
+  position: absolute;
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: transparent;
+  left: 0.09rem;
+  top: 0.09rem;
+  border-radius: 1px;
+}
+.form-component:has(input[type=checkbox]) input:checked::after {
+  background-color: rgb(21, 86, 37);
+}
+.form-component:has(input[type=checkbox]) input:checked:disabled::after {
+  background-color: #a09c9c;
+}
+.form-component:has(input[type=checkbox]) label {
+  position: relative;
+}
+
+.form-component:has(input[type=checkbox]).error input {
+  border-color: red;
+}
+.form-component:has(input[type=checkbox]).error input:checked::after {
+  background-color: red;
+}
+.form-component:has(input[type=checkbox]).error label {
+  color: red;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+/* -----------------------------------------------------*/
+/* Drop down Select                                     */
+/*                                                      */
+/* -----------------------------------------------------*/
+.form-component:has(select) select {
+  font-family: inherit;
+  margin-bottom: 1rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  width: 20rem;
+  font-size: 1rem;
+  border: 2px solid #a09c9c;
+  background-color: #fdfdfd;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #605c5c;
+  position: relative;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%;
+  background-size: 0.65rem auto;
+}
+.form-component:has(select) select:focus {
+  border-color: rgb(21, 86, 37);
+}
+.form-component:has(select) select:has(option[value=""]:not(:checked)) {
+  color: rgb(21, 86, 37);
+}
+
+.form-component:has(select).error select {
+  border: 2px solid red;
+  color: red;
+}
+
+a {
+  text-decoration: none;
+  font-size: inherit;
+}
+a :hover {
+  cursor: pointer;
+}
+
+.link-primary {
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: 2s ease;
+  color: rgb(21, 86, 37);
+}
+.link-primary:hover {
+  color: #1f7f37;
+  border-bottom: 2px solid #1f7f37;
+}
+
+.link-secondary {
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: 2s ease;
+  color: hsl(0, 2%, 52%);
+}
+.link-secondary:hover {
+  color: #605c5c;
+  border-bottom: 2px solid #605c5c;
+}
+
+nav.navbar .container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav.navbar .nav-menu ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+nav.navbar .nav-menu ul a {
+  display: block;
+}
+nav.navbar .link-primary {
+  transform: translateY(6px);
+}
+nav.navbar .link-primary.active, nav.navbar .link-primary:hover {
+  color: #0b2d13;
+  border-bottom: 2px solid #0b2d13;
+}
+nav.navbar .logo {
+  font-size: 2rem;
+  color: rgb(21, 86, 37);
+}
+
+.hamburger {
+  z-index: 100;
+  cursor: pointer;
+  display: block;
+}
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 2px;
+  margin: 7px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(21, 86, 37);
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.mobile-menu {
+  display: none;
+  transform: translateX(1645px);
+  transition: all 1s ease;
+  position: absolute;
+  z-index: 10;
+  background-color: #fff;
+  opacity: 95%;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
+.mobile-menu.active {
+  transform: translateX(0);
+}
+.mobile-menu ul {
+  margin-top: 200px;
+}
+.mobile-menu li {
+  padding-bottom: 35px;
+  font-size: 1.4rem;
+}
+
+html,
+body {
+  font-family: "Lato", sans-serif;
+}
+
+main {
+  margin-block: 4rem;
+  padding-inline: 5rem;
+}
+
+.outline {
+  border: 1px solid #a09c9c;
+}/*# sourceMappingURL=style.css.map */
