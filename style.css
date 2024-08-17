@@ -491,7 +491,7 @@ button[disabled]:active {
   z-index: -1;
   display: flex;
   flex-direction: column;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 1rem 2rem 2rem 2rem;
   width: 50%;
   max-width: 1200px;
   min-width: 400px;
@@ -512,7 +512,7 @@ button[disabled]:active {
 .modal-close {
   position: absolute;
   top: 0rem;
-  right: 0rem;
+  right: -1rem;
   color: rgb(21, 86, 37);
   transition: 1s ease;
 }
