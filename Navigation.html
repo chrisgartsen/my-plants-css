@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
   </head>
   <body>
@@ -73,6 +80,28 @@
           </ul>
         </div>
       </div>
+
+      <h1>Modal</h1>
+
+      <button class="btn-primary" id="showModal">Show Modal</button>
     </main>
+
+    <div class="modal-backdrop">
+      <div class="modal">
+        <div class="modal-header">
+          <h3>This is the modal Header</h3>
+          <div class="modal-close"><i class="fas fa-close fa-lg"></i></div>
+        </div>
+
+        <div class="modal-content">Content</div>
+
+        <div class="modal-footer">
+          <button class="btn-primary">Accept</button>
+          <button class="btn-secondary">Decline</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
