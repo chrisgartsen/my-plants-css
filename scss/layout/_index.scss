@@ -1,0 +1,28 @@
+html,
+body {
+  font-family: "Lato", sans-serif;
+  position: relative;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  margin-block: 4rem;
+  padding-inline: 5rem;
+  flex: 1;
+}
+
+.outline {
+  border: 1px solid $secondary-color-light;
+}
+
+footer {
+  padding: 2rem;
+  height: 5rem;
+  background-color: $secondary-color-light;
+  color: $white-color;
+}

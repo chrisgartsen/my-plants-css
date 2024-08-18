@@ -4,13 +4,22 @@ $full-white-color: #fff;
 $white-color: #fdfdfd;
 $white-ivory: #fafafa;
 
-$primary-color: rgb(21, 86, 37);
-$secondary-color: hsl(0, 2%, 52%);
-
 $error-color: red;
 
+$primary-color: rgb(21, 86, 37);
 $primary-color-light: lighten($primary-color, 10%);
 $primary-color-dark: darken($primary-color, 10%);
 
+$secondary-color: hsl(0, 2%, 52%);
 $secondary-color-light: lighten($secondary-color, 10%);
 $secondary-color-dark: darken($secondary-color, 15%);
+
+// Screensizes and breakpoints
+
+$breakpoints: (
+  "xs": 640px,
+  "sm": 780px,
+  "md": 1200px,
+  "lg": 1440px,
+  "xl": 2100px,
+);
