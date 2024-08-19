@@ -64,7 +64,9 @@ video {
   vertical-align: baseline;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
 }
 
 footer,
@@ -295,6 +297,12 @@ button[disabled]:active {
 .form-component:has(textarea) textarea:disabled {
   color: #a09c9c;
 }
+.form-component:has(input[type=text]) input:not(:-moz-placeholder-shown) ~ label, .form-component:has(input[type=text]) textarea:not(:-moz-placeholder-shown) ~ label, .form-component:has(input[type=password]) input:not(:-moz-placeholder-shown) ~ label, .form-component:has(input[type=password]) textarea:not(:-moz-placeholder-shown) ~ label, .form-component:has(textarea) input:not(:-moz-placeholder-shown) ~ label, .form-component:has(textarea) textarea:not(:-moz-placeholder-shown) ~ label {
+  transform: translateY(-1.6rem);
+  font-size: 0.9rem;
+  background-color: #fdfdfd;
+  padding-bottom: 1px;
+}
 .form-component:has(input[type=text]) input:focus ~ label,
 .form-component:has(input[type=text]) input:not(:placeholder-shown) ~ label,
 .form-component:has(input[type=text]) textarea:focus ~ label,
@@ -311,6 +319,12 @@ button[disabled]:active {
   font-size: 0.9rem;
   background-color: #fdfdfd;
   padding-bottom: 1px;
+}
+.form-component:has(input[type=text]) input:not(:-moz-placeholder-shown) ~ label, .form-component:has(input[type=text]) textarea:not(:-moz-placeholder-shown) ~ label, .form-component:has(input[type=password]) input:not(:-moz-placeholder-shown) ~ label, .form-component:has(input[type=password]) textarea:not(:-moz-placeholder-shown) ~ label, .form-component:has(textarea) input:not(:-moz-placeholder-shown) ~ label, .form-component:has(textarea) textarea:not(:-moz-placeholder-shown) ~ label {
+  color: #a09c9c;
+  border-left: solid 2px #a09c9c;
+  border-right: solid 2px #a09c9c;
+  background-color: #fdfdfd;
 }
 .form-component:has(input[type=text]) input:not(:placeholder-shown) ~ label,
 .form-component:has(input[type=text]) textarea:not(:placeholder-shown) ~ label,
@@ -344,6 +358,11 @@ button[disabled]:active {
   border-color: red;
   margin-bottom: 0.2rem;
 }
+.form-component:has(input[type=text]).error input:not(:-moz-placeholder-shown) ~ label, .form-component:has(input[type=text]).error textarea:not(:-moz-placeholder-shown) ~ label, .form-component:has(input[type=password]).error input:not(:-moz-placeholder-shown) ~ label, .form-component:has(input[type=password]).error textarea:not(:-moz-placeholder-shown) ~ label, .form-component:has(textarea).error input:not(:-moz-placeholder-shown) ~ label, .form-component:has(textarea).error textarea:not(:-moz-placeholder-shown) ~ label {
+  color: red;
+  border-left-color: red;
+  border-right-color: red;
+}
 .form-component:has(input[type=text]).error input:not(:placeholder-shown) ~ label,
 .form-component:has(input[type=text]).error input:focus ~ label,
 .form-component:has(input[type=text]).error textarea:not(:placeholder-shown) ~ label,
@@ -376,7 +395,9 @@ button[disabled]:active {
   margin-bottom: 0.5rem;
 }
 .form-component:has(input[type=radio]) input[type=radio] {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-color: #fdfdfd;
   margin: 0;
   color: rgb(21, 86, 37);
@@ -418,7 +439,9 @@ button[disabled]:active {
   margin-bottom: 0.5rem;
 }
 .form-component:has(input[type=checkbox]) input {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: 2px solid rgb(21, 86, 37);
   width: 1.2rem;
   height: 1.2rem;
@@ -467,7 +490,9 @@ button[disabled]:active {
 .form-component:has(select) select {
   font-family: inherit;
   margin-bottom: 1rem;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   outline: none;
   width: 20rem;
   font-size: 1rem;
@@ -614,8 +639,9 @@ nav.navbar .link-primary {
   transform: translateY(8px);
 }
 nav.navbar .logo {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: rgb(21, 86, 37);
+  text-transform: uppercase;
 }
 
 .hamburger {
