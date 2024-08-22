@@ -12,25 +12,40 @@
   padding: 2rem 2rem;
 
   @include xl {
-      width: 60vw;
+    width: 60vw;
   }
 
   @include lg {
-      width: 60vw;
-    }
-  
-    @include md {
-      width: 70vw;
-    }
-  
-    @include sm {
-      width: 70vw;
-    }
-  
-    @include xs {
-      width: 70vw;
-    }
+    width: 60vw;
+  }
+
+  @include md {
+    width: 80vw;
+  }
+
+  @include sm {
+    width: 80vw;
+  }
+
+  @include xs {
+    width: 90vw;
+  }
   &-content {
     margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-form {
+    flex: 1;
+  }
+
+  &-image {
+    flex: 1;
+  }
+  &-buttons {
+    display: flex;
+    gap: 1rem;
   }
 }

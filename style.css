@@ -129,6 +129,13 @@ h3 {
   color: rgb(21, 86, 37);
 }
 
+img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 html,
 body {
   font-family: "Lato", sans-serif;
@@ -145,6 +152,7 @@ main {
   margin-block: 4rem;
   padding-inline: 5rem;
   flex: 1;
+  height: 100%;
 }
 
 .outline {
@@ -156,6 +164,36 @@ footer {
   height: 5rem;
   background-color: #a09c9c;
   color: #fdfdfd;
+}
+
+#login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#login-page .card-buttons {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #a09c9c;
+  width: 90%;
+}
+@media only screen and (max-width: 840px) {
+  #login-page .card-form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  #login-page .card-image {
+    display: none;
+  }
+}
+@media only screen and (max-width: 640px) {
+  #login-page .card-buttons {
+    flex-direction: column;
+  }
 }
 
 .btn-primary {
@@ -241,6 +279,8 @@ button[disabled]:active {
 .form-component:has(input[type=password]),
 .form-component:has(textarea) {
   position: relative;
+  width: 90%;
+  max-width: 40rem;
 }
 .form-component:has(input[type=text]) label,
 .form-component:has(input[type=password]) label,
@@ -269,6 +309,7 @@ button[disabled]:active {
 .form-component:has(input[type=password]) textarea,
 .form-component:has(textarea) input,
 .form-component:has(textarea) textarea {
+  width: 100%;
   font-family: inherit;
   font-size: 1rem;
   color: rgb(21, 86, 37);
@@ -604,23 +645,36 @@ button[disabled]:active {
     width: 60vw;
   }
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1124px) {
   .card {
-    width: 70vw;
+    width: 80vw;
   }
 }
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 840px) {
   .card {
-    width: 70vw;
+    width: 80vw;
   }
 }
 @media only screen and (max-width: 640px) {
   .card {
-    width: 70vw;
+    width: 90vw;
   }
 }
 .card-content {
   margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-form {
+  flex: 1;
+}
+.card-image {
+  flex: 1;
+}
+.card-buttons {
+  display: flex;
+  gap: 1rem;
 }
 
 a {
