@@ -166,36 +166,6 @@ footer {
   color: #fdfdfd;
 }
 
-#login-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#login-page .card-buttons {
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid #a09c9c;
-  width: 90%;
-}
-@media only screen and (max-width: 840px) {
-  #login-page .card-form form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-  }
-  #login-page .card-image {
-    display: none;
-  }
-}
-@media only screen and (max-width: 640px) {
-  #login-page .card-buttons {
-    flex-direction: column;
-  }
-}
-
 .btn-primary {
   font-family: inherit;
   font-size: 1rem;
@@ -790,4 +760,44 @@ nav.navbar .logo {
 .mobile-menu li {
   padding-bottom: 35px;
   font-size: 1.4rem;
+}
+
+#login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#login-page .card {
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+}
+#login-page .card-content {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+#login-page .card-buttons {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #a09c9c;
+  width: 90%;
+}
+@media only screen and (max-width: 840px) {
+  #login-page .card-form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  #login-page .card-image {
+    display: none;
+  }
+}
+@media only screen and (max-width: 640px) {
+  #login-page .card-buttons {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */
