@@ -140,6 +140,7 @@ html,
 body {
   font-family: "Lato", sans-serif;
   position: relative;
+  overflow-x: hidden;
 }
 
 .body {
@@ -742,19 +743,18 @@ nav.navbar .logo {
 
 .mobile-menu {
   display: none;
-  transform: translateX(1645px);
+  transform: translateX(645px);
   transition: all 1s ease;
   position: absolute;
   z-index: 10;
   background-color: #fff;
-  opacity: 95%;
+  opacity: 92%;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   justify-content: center;
   text-align: center;
-  display: flex;
 }
 .mobile-menu.active {
   transform: translateX(0);
@@ -765,6 +765,11 @@ nav.navbar .logo {
 .mobile-menu li {
   padding-bottom: 35px;
   font-size: 1.4rem;
+}
+@media only screen and (max-width: 640px) {
+  .mobile-menu {
+    display: flex;
+  }
 }
 
 #login-page {

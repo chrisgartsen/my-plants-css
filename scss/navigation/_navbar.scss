@@ -68,12 +68,12 @@ nav.navbar {
 
 .mobile-menu {
   display: none;
-  transform: translateX(1645px);
+  transform: translateX(645px);
   transition: all 1s ease;
   position: absolute;
   z-index: 10;
   background-color: #fff;
-  opacity: 95%;
+  opacity: 92%;
   top: 0;
   left: 0;
   width: 100vw;
@@ -93,5 +93,8 @@ nav.navbar {
     padding-bottom: 35px;
     font-size: 1.4rem;
   }
-  display: flex;
+
+  @include xs {
+    display: flex;
+  }
 }
