@@ -7,8 +7,7 @@
 .form-component:has(input[type="password"]),
 .form-component:has(textarea) {
   position: relative;
-  width: 90%;
-  max-width: 40rem;
+  width: 100%;
 
   label {
     position: absolute;
@@ -35,7 +34,7 @@
     font-family: inherit;
     font-size: 1rem;
     color: $primary-color;
-    background-color: inherit;
+    background-color: $white-color;
 
     padding: 1rem 1.5rem;
     outline: none;
