@@ -743,6 +743,11 @@ nav.navbar .logo {
 
 .mobile-menu {
   display: none;
+  background-image: url("/images/plant-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: luminosity;
   transform: translateX(645px);
   transition: all 1s ease;
   position: absolute;
