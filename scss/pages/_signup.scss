@@ -1,0 +1,6 @@
+#signup-page {
+  @include center-form;
+  .card {
+    @include card-image("/images/plant-5.jpg");
+  }
+}

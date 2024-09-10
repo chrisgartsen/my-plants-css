@@ -41,6 +41,10 @@
 
   &-content {
     margin-bottom: 2rem;
+
+    @include xs {
+      text-align: center;
+    }
   }
 
   &-header {

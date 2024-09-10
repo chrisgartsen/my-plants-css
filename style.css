@@ -129,6 +129,13 @@ h3 {
   color: rgb(21, 86, 37);
 }
 
+h4 {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-block: 0.5rem;
+  color: rgb(21, 86, 37);
+}
+
 img {
   height: 100%;
   width: 100%;
@@ -636,6 +643,11 @@ button[disabled]:active {
   margin-bottom: 2rem;
 }
 @media only screen and (max-width: 640px) {
+  .card-content {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 640px) {
   .card-header {
     text-align: center;
   }
@@ -792,4 +804,27 @@ nav.navbar .logo {
   #login-page .card {
     background-image: none;
   }
+}
+
+#signup-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#signup-page .card {
+  background-image: url("/images/plant-5.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media only screen and (max-width: 840px) {
+  #signup-page .card {
+    background-image: none;
+  }
+}
+
+#account-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */

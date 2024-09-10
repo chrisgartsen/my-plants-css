@@ -1,16 +1,7 @@
 #login-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center-form;
 
   .card {
-    background-image: url("/images/plant-1.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    @include sm {
-      background-image: none;
-    }
+    @include card-image("/images/plant-1.jpg");
   }
 }
