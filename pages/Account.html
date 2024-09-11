@@ -41,7 +41,6 @@
           </header>
 
           <section class="card-content">
-            <p>Please fill in the form to create an account.</p>
             <div class="card-form">
               <div class="form-component">
                 <input
@@ -62,12 +61,30 @@
                 />
                 <label for="text-input">Username</label>
               </div>
+              <button class="btn-primary">Save</button>
+              <div class="card-divider"></div>
 
-              <span class="spacer">spacer</span>
+              <h4>Change password</h4>
 
-              <header class="card-header">
-                <h4>Change password</h4>
-              </header>
+              <div class="form-component">
+                <input
+                  type="password"
+                  name="text-input"
+                  id="pw-input"
+                  placeholder=""
+                />
+                <label for="text-input">Old Password</label>
+              </div>
+
+              <div class="form-component">
+                <input
+                  type="password"
+                  name="text-input"
+                  id="pw-input"
+                  placeholder=""
+                />
+                <label for="text-input">New Password</label>
+              </div>
 
               <div class="form-component">
                 <input
@@ -78,14 +95,12 @@
                 />
                 <label for="text-input">Confirm Password</label>
               </div>
+
+              <button class="btn-primary">Update</button>
             </div>
           </section>
 
-          <footer class="card-footer">
-            <div class="card-buttons">
-              <button class="btn-primary">Signup</button>
-            </div>
-          </footer>
+          <footer class="card-footer"></footer>
         </div>
       </main>
       <footer class="page-footer">The footer</footer>

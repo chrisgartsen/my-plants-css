@@ -53,6 +53,12 @@
     }
   }
 
+  &-divider {
+    width: 100%;
+    border-top: 1px solid $secondary-color-light;
+    margin-block: 2rem;
+  }
+
   &-buttons {
     display: flex;
     gap: 0.5rem;
